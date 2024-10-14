@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-CORS(app, resources={r"/generer_fiche_cours": {"origins": "https://gentle-creponne-0692d4.netlify.app"}})
+CORS(app, resources={r"/generer_fiche_cours": {"origins": "*"}})
 
 # Clé API OpenAI
 openai_api_key = os.getenv('OPENAI_API_KEY')
