@@ -1,9 +1,12 @@
 from flask import Flask, request, jsonify, send_file
 from openai import OpenAI
+from flask_cors import CORS
 import docx
 import os
 
 app = Flask(__name__)
+
+CORS(app, resources={r"/generer_fiche_cours": {"origins": "https://gentle-creponne-0692d4.netlify.app"}})
 
 # Clé API OpenAI
 openai_api_key = os.getenv('OPENAI_API_KEY')
