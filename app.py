@@ -18,8 +18,8 @@ def generer_fiche_de_cours(template, document_data):
     messages = [
         {"role": "system", "content": "Tu es un assistant qui aide à créer des fiches de cours en suivant un modèle donné."},
         {"role": "user", "content": f"Voici un modèle de fiche de cours : {template}"},
-        {"role": "user", "content": f"Voici les informations à utiliser pour remplir ce modèle : {document_data}"}
-        {"role": "user", "content": f"Si la durée du cours n'est pas spécifier alors tu dois l'estimer."},
+        {"role": "user", "content": f"Voici les informations à utiliser pour remplir ce modèle : {document_data}"},
+        {"role": "user", "content": f"Si la durée du cours n'est pas spécifier alors tu dois l'estimer."}
     ]
 
     # Utilisation de l'endpoint chat completions avec un modèle de type chat
